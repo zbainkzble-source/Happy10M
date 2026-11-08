@@ -1,0 +1,180 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Itim', cursive, sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.curtain-left, .curtain-right {
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #ffe1ee; 
+    z-index: 100;
+    transition: transform 1.5s ease-in-out;
+}
+
+.curtain-left {
+    left: 0;
+}
+
+.curtain-right {
+    right: 0;
+}
+
+.curtain-left.open {
+    transform: translateX(-100%);
+}
+
+.curtain-right.open {
+    transform: translateX(100%);
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#page1 {
+    background-image: url('love.jpg'); 
+}
+
+.anniversary-btn {
+    font-size: 2.2rem;
+    padding: 2px 20px;
+    background: rgba(255, 255, 255, 0.497);
+    color: #000409;
+    border: 3px solid #ffe1ee; 
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.anniversary-btn:hover {
+    transform: scale(1.08);
+    background: #ffffff;
+}
+
+#page2 {
+    background-image: url('hugcat.jpg');
+}
+
+.slider-container {
+    position: relative;
+    max-width: 90%;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.slider-container img {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 20px;
+    object-fit: contain;
+    user-select: none;
+}
+
+.slide-counter {
+    margin-top: 12px;
+    font-size: 1.3rem;
+    color: #000b17;
+    background: #ffe1ee; 
+    padding: 4px 16px;
+    border-radius: 20px;
+}
+
+.tap-hint {
+    margin-top: 6px;
+    font-size: 1rem;
+    color: #000b17;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+#page3 {
+    background-image: url('giflove.gif'); 
+}
+
+.message-container {
+    width: 90%;
+    max-width: 700px;
+    max-height: 90vh;
+    background: transparent;
+    padding: 20px;
+    box-shadow: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message-title {
+    color: #ff348c; 
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 8px #ffe1ee , 0 0 10px #ffe1ee;
+}
+
+.message-content {
+    width: 100%;
+    overflow-y: auto;
+    max-height: 60vh;
+    padding-right: 10px;
+    margin-bottom: 25px;
+    color: #000a0f;
+    font-size: 1.35rem;
+    line-height: 1.8;
+    text-shadow: 1px 1px 6px #ffe1ee , 0 0 4px #ffe1ee; 
+}
+
+.message-content p {
+    margin-bottom: 18px;
+    text-indent: 20px;
+}
+
+.love-btn {
+    font-size: 1.5rem;
+    padding: 12px 35px;
+    background-color: #ffe1ee; 
+    color: rgb(0, 14, 30);
+    border: 2px solid #ffffff;
+    border-radius: 22px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px #ffe1ee;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.love-btn:hover {
+    transform: scale(1.08);
+    background-color: #ffe1ee; 
+      border: 2px solid #ff72af;
+}
